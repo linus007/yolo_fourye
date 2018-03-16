@@ -128,7 +128,10 @@ class YoloSolver(Solver):
                     train_timer.toc()
 
                     log_str = ('{} Epoch: {}, Step: {}, Learning rate: {}'
-                        ' Loss: {:5.3f}\nSpeed: {:.3f}s/iter,'
+                        ' Loss: {:5.3f}if self.pretrain(self._is_pretrain):
+            pretrain_model_path = osp.join(self._data_path, cfg.PRETRAIN_MODEL_PATH)
+            assert osp.exists(pretrain_model_path)  \
+                , "pretrain model not in the\nSpeed: {:.3f}s/iter,'
                         'Load: {:.3f}s/iter, Remain: {}').format(
                         datetime.datetime.now().strftime('%m/%d %H:%M:%s')
                         , self._data_batch.epoch

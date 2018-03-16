@@ -94,7 +94,7 @@ class Net(object):
         , name, padding=DEFAULT_PADDING
         , group=1, trainable=True, pretrainable=True):
         """
-        convolutional layer
+        convolutional layerBN_EPSILON
         Args:
             input: 4-D tensor [batch_size, height, width, depth]
             name: variable_scope name
@@ -258,17 +258,4 @@ class Net(object):
             return fc
 
     def inference(self):
-        raise NotImplementedError
-
-
-
-    def loss(self, predicts, lables, objects_num):
-        """
-        Add loss to all the trainable variables
-        Args:
-        predicts: 4-D tensor [batch_size, cell_size, cell_size, 5 * boxes_per_cell]
-        ===> (nums_classes, boxes_percell, 4 * boxes_per_cell)
-        lables: 3-D tensor of [batch_size, max_objects, 5]
-        objects_num: 1-D tensor [batch_size]
-        """
         raise NotImplementedError
